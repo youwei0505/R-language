@@ -41,9 +41,8 @@ x4<-Transaction_Table %>%
     avg_price=(Buy_price+Sell_price)/2,
     Ret_log=(Sell_price/Buy_price)
   )%>%
-  arrange(Buy_date,Ret)
-  
-
+  arrange(desc(code))%>%
+  pull(Ret)
 
 
 
